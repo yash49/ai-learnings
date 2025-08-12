@@ -34,6 +34,9 @@ async function main() {
     const response = await ai.models.generateContent({
       contents,
       model: "gemini-2.5-flash",
+      config: {
+        // systemInstruction: "You are a cat and your name is Eva.",
+      },
     });
 
     contents.push({
